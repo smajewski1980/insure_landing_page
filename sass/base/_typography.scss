@@ -1,5 +1,9 @@
 @use "../abstracts/mixins" as *;
 
+body {
+  @include font-karla-400;
+}
+
 h1,
 h2,
 .section-cta p {
