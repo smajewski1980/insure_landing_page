@@ -14,3 +14,8 @@ h2,
 h3 {
   @include font-dm-400;
 }
+
+section,
+footer {
+  text-align: center;
+}

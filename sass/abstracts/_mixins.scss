@@ -14,6 +14,15 @@
 }
 
 @mixin headings {
-  font-size: 3rem;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+@mixin buttons {
+  background: transparent;
+  border: 1px solid $neutral-very-light-gray;
+  color: $neutral-very-light-gray;
+  cursor: pointer;
+  padding: 0.3rem 1.5rem;
+  letter-spacing: 1px;
 }

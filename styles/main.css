@@ -35,13 +35,27 @@ h2,
 .section-cta p {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: 3rem;
-  line-height: 1.1;
+  font-size: 2.5rem;
+  line-height: 1;
 }
 
 h3 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
+}
+
+section,
+footer {
+  text-align: center;
+}
+
+button {
+  background: transparent;
+  border: 1px solid hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+  padding: 0.3rem 1.5rem;
+  letter-spacing: 1px;
 }
 
 header {
@@ -60,6 +74,7 @@ header ul {
   background-color: hsl(270, 9%, 17%);
   transition: transform 0.5s ease;
   transform: translatex(-100vw);
+  z-index: 999;
 }
 header ul li {
   font-size: 1.5rem;
@@ -79,6 +94,51 @@ header ul .nav-mobile-decoration img {
   min-width: 100vw;
 }
 
+.section-cta {
+  color: hsl(0, 0%, 98%);
+  background-color: hsl(256, 26%, 20%);
+}
+
 .hero-img-wrapper-desktop {
   display: none;
+}
+
+.section-hero {
+  background-color: hsl(256, 26%, 20%);
+  margin-bottom: 10rem;
+}
+.section-hero .hero-img-wrapper-mobile img {
+  width: 100%;
+}
+.section-hero .hero-content {
+  padding: 5.5rem 2rem;
+  position: relative;
+}
+.section-hero .hero-content h1,
+.section-hero .hero-content p {
+  color: hsl(0, 0%, 98%);
+}
+.section-hero .hero-content h1 {
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 5;
+}
+.section-hero .hero-content p {
+  margin-bottom: 2rem;
+}
+.section-hero .hero-content img:first-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.section-hero .hero-content img:last-child {
+  position: absolute;
+  right: 0;
+  bottom: -12rem;
+  z-index: 1;
+}
+.section-hero .hero-content button {
+  position: relative;
+  z-index: 5;
 }/*# sourceMappingURL=main.css.map */

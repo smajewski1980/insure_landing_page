@@ -19,6 +19,7 @@ header {
     background-color: $neutral-very-dk-violet;
     transition: transform 0.5s ease;
     transform: translatex(-100vw);
+    z-index: 999;
     li {
       font-size: 1.5rem;
       width: 90%;

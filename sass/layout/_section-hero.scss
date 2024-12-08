@@ -1,3 +1,53 @@
+@use "../abstracts/variables" as *;
+
 .hero-img-wrapper-desktop {
   display: none;
+}
+// once we get a media query in place we can get rid of above
+
+.section-hero {
+  background-color: $primary-dk-violet;
+  margin-bottom: 10rem;
+
+  .hero-img-wrapper-mobile {
+    img {
+      width: 100%;
+    }
+  }
+  .hero-content {
+    padding: 5.5rem 2rem;
+    position: relative;
+    h1,
+    p {
+      color: $neutral-very-light-gray;
+    }
+
+    h1 {
+      margin-bottom: 1rem;
+      position: relative;
+      z-index: 5;
+    }
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    img:first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
+
+    img:last-child {
+      position: absolute;
+      right: 0;
+      bottom: -12rem;
+      z-index: 1;
+    }
+    button {
+      position: relative;
+      z-index: 5;
+    }
+  }
 }
