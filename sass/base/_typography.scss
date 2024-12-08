@@ -1,0 +1,12 @@
+@use "../abstracts/mixins" as *;
+
+h1,
+h2,
+.section-cta p {
+  @include font-dm-400;
+  @include headings;
+}
+
+h3 {
+  @include font-dm-400;
+}

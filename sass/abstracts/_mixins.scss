@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+@mixin font-dm-400 {
+  font-family: $font-dm-serif;
+  font-weight: 400;
+}
+@mixin font-karla-400 {
+  font-family: $font-karla;
+  font-weight: 400;
+}
+@mixin font-karla-700 {
+  font-family: $font-karla;
+  font-weight: 700;
+}
+
+@mixin headings {
+  font-size: 3rem;
+  line-height: 1.1;
+}

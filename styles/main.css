@@ -1,1 +1,13 @@
-/*# sourceMappingURL=main.css.map */
+h1,
+h2,
+.section-cta p {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+h3 {
+  font-family: "DM Serif Display", serif;
+  font-weight: 400;
+}/*# sourceMappingURL=main.css.map */
