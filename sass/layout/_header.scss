@@ -1,0 +1,41 @@
+@use "../abstracts/variables" as *;
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+
+  nav {
+    .close-icon-wrapper {
+      display: none;
+    }
+  }
+
+  ul {
+    margin-top: 5rem;
+    position: absolute;
+    inset: 0;
+    background-color: $neutral-very-dk-violet;
+    transition: transform 0.5s ease;
+    transform: translatex(-100vw);
+    li {
+      font-size: 1.5rem;
+      width: 90%;
+      text-align: center;
+      margin-block: 1.5rem;
+      color: white;
+      padding-block: 0.5rem;
+    }
+    .nav-mobile-decoration {
+      position: absolute;
+      // outline: 2px solid lime;
+      width: 100%;
+      left: 0;
+      bottom: 0;
+      img {
+        min-width: 100vw;
+      }
+    }
+  }
+}

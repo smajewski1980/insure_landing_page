@@ -42,4 +42,43 @@ h2,
 h3 {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
+}
+
+header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+}
+header nav .close-icon-wrapper {
+  display: none;
+}
+header ul {
+  margin-top: 5rem;
+  position: absolute;
+  inset: 0;
+  background-color: hsl(270, 9%, 17%);
+  transition: transform 0.5s ease;
+  transform: translatex(-100vw);
+}
+header ul li {
+  font-size: 1.5rem;
+  width: 90%;
+  text-align: center;
+  margin-block: 1.5rem;
+  color: white;
+  padding-block: 0.5rem;
+}
+header ul .nav-mobile-decoration {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+}
+header ul .nav-mobile-decoration img {
+  min-width: 100vw;
+}
+
+.hero-img-wrapper-desktop {
+  display: none;
 }/*# sourceMappingURL=main.css.map */
