@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+
+footer {
+  background-color: $neutral-very-light-gray;
+  position: relative;
+  .footer-top {
+    padding-block: 5rem 2.5rem;
+    margin-inline: 1.5rem;
+    border-bottom: 1px solid lighten($primary-dk-violet, 70%);
+
+    > img {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    > * {
+      width: fit-content;
+      margin-inline: auto;
+    }
+
+    .social-icons-wrapper {
+      display: flex;
+      margin-top: 1.5rem;
+      gap: 1rem;
+    }
+  }
+
+  .footer-bottom {
+    padding-bottom: 3rem;
+
+    h4 {
+      opacity: 0.4;
+      margin-block: 2rem 1rem;
+    }
+
+    ul li {
+      font-weight: 700;
+    }
+
+    ul li:not(:last-child) {
+      margin-bottom: 0.5rem;
+    }
+  }
+}

@@ -7,6 +7,7 @@
 
 ul {
   list-style: none;
+  padding: 0;
 }
 
 body {
@@ -72,6 +73,44 @@ button {
 }
 .card p {
   opacity: 0.5;
+}
+
+footer {
+  background-color: hsl(0, 0%, 98%);
+  position: relative;
+}
+footer .footer-top {
+  padding-block: 5rem 2.5rem;
+  margin-inline: 1.5rem;
+  border-bottom: 1px solid #e2dfec;
+}
+footer .footer-top > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+footer .footer-top > * {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-inline: auto;
+}
+footer .footer-top .social-icons-wrapper {
+  display: flex;
+  margin-top: 1.5rem;
+  gap: 1rem;
+}
+footer .footer-bottom {
+  padding-bottom: 3rem;
+}
+footer .footer-bottom h4 {
+  opacity: 0.4;
+  margin-block: 2rem 1rem;
+}
+footer .footer-bottom ul li {
+  font-weight: 700;
+}
+footer .footer-bottom ul li:not(:last-child) {
+  margin-bottom: 0.5rem;
 }
 
 header {
