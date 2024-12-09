@@ -58,6 +58,22 @@ button {
   letter-spacing: 1px;
 }
 
+.card {
+  padding-inline: 1.5rem;
+  max-width: 25rem;
+  margin-inline: auto;
+}
+.card img {
+  margin-inline: auto;
+}
+.card h3 {
+  font-size: 1.75rem;
+  margin-block: 2rem 1rem;
+}
+.card p {
+  opacity: 0.5;
+}
+
 header {
   align-items: center;
   display: flex;
@@ -97,6 +113,25 @@ header ul .nav-mobile-decoration img {
 .section-cta {
   color: hsl(0, 0%, 98%);
   background-color: hsl(256, 26%, 20%);
+  margin-block: 8rem;
+}
+
+.section-different::before {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: hsl(256, 26%, 20%);
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  opacity: 0.4;
+}
+.section-different h2 {
+  margin-bottom: 5rem;
+}
+.section-different .card-wrapper {
+  display: grid;
+  gap: 3.5rem;
 }
 
 .hero-img-wrapper-desktop {
@@ -105,7 +140,7 @@ header ul .nav-mobile-decoration img {
 
 .section-hero {
   background-color: hsl(256, 26%, 20%);
-  margin-bottom: 10rem;
+  margin-bottom: 9rem;
 }
 .section-hero .hero-img-wrapper-mobile img {
   width: 100%;

@@ -26,3 +26,14 @@
   padding: 0.3rem 1.5rem;
   letter-spacing: 1px;
 }
+
+@mixin section-decoration {
+  content: "";
+  width: 150px;
+  height: 1px;
+  background-color: $primary-dk-violet;
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 3rem;
+  opacity: 0.4;
+}

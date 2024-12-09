@@ -1,0 +1,20 @@
+@use "../abstracts/mixins" as *;
+
+.section-different {
+  // * {
+  //   outline: 2px solid lime;
+  // }
+
+  &::before {
+    @include section-decoration;
+  }
+
+  h2 {
+    margin-bottom: 5rem;
+  }
+
+  .card-wrapper {
+    display: grid;
+    gap: 3.5rem;
+  }
+}
