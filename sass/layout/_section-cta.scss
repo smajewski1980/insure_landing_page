@@ -1,7 +1,21 @@
 @use "../abstracts/variables" as *;
 
 .section-cta {
+  position: relative;
+  img {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
   color: $neutral-very-light-gray;
   background-color: $primary-dk-violet;
-  margin-block: 8rem;
+  margin: 8rem 1.5rem;
+  padding: 4rem 1.5rem;
+
+  p {
+    margin-bottom: 3rem;
+    position: relative;
+    z-index: 5;
+  }
 }

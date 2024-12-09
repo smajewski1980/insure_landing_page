@@ -1,10 +1,6 @@
 @use "../abstracts/mixins" as *;
 
 .section-different {
-  // * {
-  //   outline: 2px solid lime;
-  // }
-
   &::before {
     @include section-decoration;
   }

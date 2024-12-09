@@ -111,9 +111,22 @@ header ul .nav-mobile-decoration img {
 }
 
 .section-cta {
+  position: relative;
   color: hsl(0, 0%, 98%);
   background-color: hsl(256, 26%, 20%);
-  margin-block: 8rem;
+  margin: 8rem 1.5rem;
+  padding: 4rem 1.5rem;
+}
+.section-cta img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+}
+.section-cta p {
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 5;
 }
 
 .section-different::before {
