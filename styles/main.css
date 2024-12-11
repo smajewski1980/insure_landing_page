@@ -77,7 +77,12 @@ button {
   margin-block: 2rem 1rem;
 }
 .card p {
-  opacity: 0.5;
+  opacity: 0.7;
+}
+@media screen and (width > 650px) {
+  .card img {
+    margin-inline: unset;
+  }
 }
 
 footer {
@@ -248,6 +253,25 @@ header nav ul button {
 .section-different .card-wrapper {
   display: grid;
   gap: 3.5rem;
+}
+@media screen and (width > 650px) {
+  .section-different {
+    padding-inline: 12rem;
+    margin-top: 20rem;
+  }
+  .section-different::before {
+    margin-inline: unset;
+  }
+  .section-different .card-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 3.5rem;
+  }
+  .section-different .card-wrapper .card {
+    margin-inline: unset;
+    padding-inline: unset;
+    padding-right: 1.5rem;
+  }
 }
 
 .section-hero {

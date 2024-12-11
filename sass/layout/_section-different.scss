@@ -14,4 +14,25 @@
     display: grid;
     gap: 3.5rem;
   }
+
+  @media screen and (width > 650px) {
+    padding-inline: $desktop-inline-padding;
+    margin-top: 20rem;
+
+    &::before {
+      margin-inline: unset;
+    }
+
+    .card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      gap: 3.5rem;
+
+      .card {
+        margin-inline: unset;
+        padding-inline: unset;
+        padding-right: 1.5rem;
+      }
+    }
+  }
 }
