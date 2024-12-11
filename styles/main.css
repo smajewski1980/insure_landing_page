@@ -35,7 +35,7 @@ h2,
 .section-cta p {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
   line-height: 1;
 }
 
@@ -57,7 +57,7 @@ footer {
 
 button {
   background: transparent;
-  border: 1px solid hsl(0, 0%, 98%);
+  border: 2px solid hsl(0, 0%, 98%);
   color: hsl(0, 0%, 98%);
   cursor: pointer;
   padding: 0.5rem 1.5rem;
@@ -158,13 +158,14 @@ header nav ul .nav-mobile-decoration img {
 }
 header nav ul button {
   background: transparent;
-  border: 1px solid hsl(0, 0%, 98%);
+  border: 2px solid hsl(0, 0%, 98%);
   color: hsl(0, 0%, 98%);
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   letter-spacing: 1px;
   width: 75%;
   padding-block: 0.75rem;
+  font-weight: 700;
 }
 @media screen and (width > 650px) {
   header nav {
@@ -174,6 +175,7 @@ header nav ul button {
     display: none;
   }
   header nav ul {
+    align-items: center;
     margin-top: 0;
     position: static;
     background-color: unset;
@@ -182,14 +184,15 @@ header nav ul button {
     gap: 2rem;
   }
   header nav ul li {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     color: hsl(256, 26%, 20%);
     padding: 0;
     margin: 0;
+    opacity: 0.7;
   }
   header nav ul button {
     background: transparent;
-    border: 1px solid hsl(256, 26%, 20%);
+    border: 2px solid hsl(256, 26%, 20%);
     color: hsl(256, 26%, 20%);
     cursor: pointer;
     padding: 0.5rem 1.5rem;
@@ -204,7 +207,7 @@ header nav ul button {
 }
 @media screen and (width > 650px) {
   header {
-    padding-inline: 10rem;
+    padding-inline: 12rem;
     padding-block: 0;
   }
 }
@@ -231,7 +234,7 @@ header nav ul button {
 .section-different::before {
   content: "";
   width: 150px;
-  height: 1px;
+  height: 2px;
   background-color: hsl(256, 26%, 20%);
   display: block;
   margin-inline: auto;
@@ -290,18 +293,36 @@ header nav ul button {
 }
 @media screen and (width > 650px) {
   .section-hero {
-    padding-inline: 10rem;
+    min-height: 625px;
+    padding-inline: 12rem;
     position: relative;
+    display: grid;
+    align-items: end;
   }
   .section-hero .hero-content {
-    max-width: 525px;
+    max-width: 64ch;
+    padding-inline: 0rem 4rem;
+  }
+  .section-hero .hero-content p {
+    margin-top: 2.5rem;
+  }
+  .section-hero .hero-content::before {
+    content: "";
+    width: 150px;
+    height: 2px;
+    background-color: white;
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 3rem;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
   }
   .section-hero .hero-img-wrapper-desktop {
     display: block;
     position: absolute;
-    right: 10rem;
-    top: 5rem;
-    max-width: 500px;
+    right: 12rem;
+    top: 8rem;
   }
   .section-hero .hero-img-wrapper-mobile,
   .section-hero .hero-content img:first-child,

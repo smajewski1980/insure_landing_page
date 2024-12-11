@@ -45,6 +45,7 @@ header {
         @include buttons($neutral-very-light-gray);
         width: 75%;
         padding-block: 0.75rem;
+        font-weight: 700;
       }
     }
     @media screen and (width > 650px) {
@@ -56,6 +57,7 @@ header {
         display: none;
       }
       ul {
+        align-items: center;
         margin-top: 0;
         position: static;
         background-color: unset;
@@ -63,10 +65,11 @@ header {
         display: flex;
         gap: 2rem;
         li {
-          font-size: 1.5rem;
+          font-size: 1.25rem;
           color: $primary-dk-violet;
           padding: 0;
           margin: 0;
+          opacity: 0.7;
         }
         button {
           @include buttons($primary-dk-violet);

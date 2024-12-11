@@ -1,8 +1,9 @@
 @use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
 
 .section-different {
   &::before {
-    @include section-decoration;
+    @include section-decoration($primary-dk-violet);
   }
 
   h2 {

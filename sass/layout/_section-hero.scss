@@ -1,4 +1,5 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 // once we get a media query in place we can get rid of above
 
@@ -55,19 +56,29 @@
     // * {
     //   outline: 2px solid lime;
     // }
-
+    min-height: 625px;
     padding-inline: $desktop-inline-padding;
     position: relative;
+    display: grid;
+    align-items: end;
     .hero-content {
-      max-width: 525px;
+      max-width: 64ch;
+      padding-inline: 0rem 4rem;
+      p {
+        margin-top: 2.5rem;
+      }
+      &::before {
+        @include section-decoration(white);
+        position: absolute;
+        top: 0;
+      }
     }
 
     .hero-img-wrapper-desktop {
       display: block;
       position: absolute;
       right: $desktop-inline-padding;
-      top: 5rem;
-      max-width: 500px;
+      top: 8rem;
     }
     .hero-img-wrapper-mobile,
     .hero-content img:first-child,
