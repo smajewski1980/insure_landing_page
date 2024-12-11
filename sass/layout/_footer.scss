@@ -1,17 +1,24 @@
 @use "../abstracts/variables" as *;
 
 footer {
-  background-color: $neutral-very-light-gray;
+  background-color: darken($neutral-very-light-gray, 12%);
   position: relative;
+
   .footer-top {
     padding-block: 5rem 2.5rem;
     margin-inline: 1.5rem;
-    border-bottom: 1px solid lighten($primary-dk-violet, 70%);
+    border-bottom: 1px solid lighten($primary-dk-violet, 50%);
 
     > img {
       position: absolute;
       top: 0;
       left: 0;
+    }
+
+    .footer-deco-desktop {
+      display: none;
+      mix-blend-mode: difference;
+      opacity: 0.1;
     }
 
     > * {
@@ -40,6 +47,30 @@ footer {
 
     ul li:not(:last-child) {
       margin-bottom: 0.5rem;
+    }
+  }
+
+  @media screen and (width > 650px) {
+    padding-inline: $desktop-inline-padding;
+    .footer-top {
+      margin: 0;
+      display: flex;
+      justify-content: space-between;
+      > * {
+        margin-inline: unset;
+      }
+
+      .social-icons-wrapper {
+        margin-top: 0;
+      }
+
+      .footer-deco-desktop {
+        display: block;
+      }
+
+      .footer-deco-mobile {
+        display: none;
+      }
     }
   }
 }
