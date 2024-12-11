@@ -1,8 +1,5 @@
 @use "../abstracts/variables" as *;
 
-.hero-img-wrapper-desktop {
-  display: none;
-}
 // once we get a media query in place we can get rid of above
 
 .section-hero {
@@ -13,6 +10,9 @@
     img {
       width: 100%;
     }
+  }
+  .hero-img-wrapper-desktop {
+    display: none;
   }
   .hero-content {
     padding: 5.5rem 2rem;
@@ -48,6 +48,31 @@
     button {
       position: relative;
       z-index: 5;
+    }
+  }
+
+  @media screen and (width > 650px) {
+    // * {
+    //   outline: 2px solid lime;
+    // }
+
+    padding-inline: $desktop-inline-padding;
+    position: relative;
+    .hero-content {
+      max-width: 525px;
+    }
+
+    .hero-img-wrapper-desktop {
+      display: block;
+      position: absolute;
+      right: $desktop-inline-padding;
+      top: 5rem;
+      max-width: 500px;
+    }
+    .hero-img-wrapper-mobile,
+    .hero-content img:first-child,
+    .hero-content img:last-child {
+      display: none;
     }
   }
 }

@@ -1,11 +1,14 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 header {
   align-items: center;
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-
+  // * {
+  //   outline: 2px solid lime;
+  // }
   nav {
     .close-icon-wrapper {
       display: none;
@@ -15,14 +18,15 @@ header {
       margin-top: 5rem;
       position: absolute;
       inset: 0;
-      background-color: $neutral-very-dk-violet;
+      background-color: $primary-dk-violet;
       transition: transform 0.5s ease;
       transform: translatex(-100vw);
       z-index: 999;
+      text-align: center;
       li {
         font-size: 1.5rem;
+        min-width: fit-content;
         width: 90%;
-        text-align: center;
         margin-block: 1.5rem;
         margin-inline: auto;
         color: white;
@@ -30,7 +34,6 @@ header {
       }
       .nav-mobile-decoration {
         position: absolute;
-        // outline: 2px solid lime;
         width: 100%;
         left: 0;
         bottom: 0;
@@ -38,6 +41,46 @@ header {
           min-width: 100vw;
         }
       }
+      button {
+        @include buttons($neutral-very-light-gray);
+        width: 75%;
+        padding-block: 0.75rem;
+      }
     }
+    @media screen and (width > 650px) {
+      // * {
+      //   outline: 2px solid lime;
+      // }
+      margin-block: 1.5rem;
+      .hamburger-wrapper {
+        display: none;
+      }
+      ul {
+        margin-top: 0;
+        position: static;
+        background-color: unset;
+        transform: unset;
+        display: flex;
+        gap: 2rem;
+        li {
+          font-size: 1.5rem;
+          color: $primary-dk-violet;
+          padding: 0;
+          margin: 0;
+        }
+        button {
+          @include buttons($primary-dk-violet);
+          margin-left: 1.5rem;
+          min-width: fit-content;
+        }
+        .nav-mobile-decoration {
+          display: none;
+        }
+      }
+    }
+  }
+  @media screen and (width > 650px) {
+    padding-inline: $desktop-inline-padding;
+    padding-block: 0;
   }
 }

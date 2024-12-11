@@ -12,7 +12,6 @@ ul {
 
 body {
   min-height: 100vh;
-  text-rendering: optimizeSpeed;
   line-height: 1.5;
 }
 
@@ -36,7 +35,7 @@ h2,
 .section-cta p {
   font-family: "DM Serif Display", serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1;
 }
 
@@ -49,13 +48,19 @@ section,
 footer {
   text-align: center;
 }
+@media screen and (width > 650px) {
+  section,
+  footer {
+    text-align: unset;
+  }
+}
 
 button {
   background: transparent;
   border: 1px solid hsl(0, 0%, 98%);
   color: hsl(0, 0%, 98%);
   cursor: pointer;
-  padding: 0.3rem 1.5rem;
+  padding: 0.5rem 1.5rem;
   letter-spacing: 1px;
 }
 
@@ -126,15 +131,17 @@ header nav ul {
   margin-top: 5rem;
   position: absolute;
   inset: 0;
-  background-color: hsl(270, 9%, 17%);
+  background-color: hsl(256, 26%, 20%);
   transition: transform 0.5s ease;
   transform: translatex(-100vw);
   z-index: 999;
+  text-align: center;
 }
 header nav ul li {
   font-size: 1.5rem;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   width: 90%;
-  text-align: center;
   margin-block: 1.5rem;
   margin-inline: auto;
   color: white;
@@ -148,6 +155,58 @@ header nav ul .nav-mobile-decoration {
 }
 header nav ul .nav-mobile-decoration img {
   min-width: 100vw;
+}
+header nav ul button {
+  background: transparent;
+  border: 1px solid hsl(0, 0%, 98%);
+  color: hsl(0, 0%, 98%);
+  cursor: pointer;
+  padding: 0.5rem 1.5rem;
+  letter-spacing: 1px;
+  width: 75%;
+  padding-block: 0.75rem;
+}
+@media screen and (width > 650px) {
+  header nav {
+    margin-block: 1.5rem;
+  }
+  header nav .hamburger-wrapper {
+    display: none;
+  }
+  header nav ul {
+    margin-top: 0;
+    position: static;
+    background-color: unset;
+    transform: unset;
+    display: flex;
+    gap: 2rem;
+  }
+  header nav ul li {
+    font-size: 1.5rem;
+    color: hsl(256, 26%, 20%);
+    padding: 0;
+    margin: 0;
+  }
+  header nav ul button {
+    background: transparent;
+    border: 1px solid hsl(256, 26%, 20%);
+    color: hsl(256, 26%, 20%);
+    cursor: pointer;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: 1px;
+    margin-left: 1.5rem;
+    min-width: -moz-fit-content;
+    min-width: fit-content;
+  }
+  header nav ul .nav-mobile-decoration {
+    display: none;
+  }
+}
+@media screen and (width > 650px) {
+  header {
+    padding-inline: 10rem;
+    padding-block: 0;
+  }
 }
 
 .section-cta {
@@ -187,16 +246,15 @@ header nav ul .nav-mobile-decoration img {
   gap: 3.5rem;
 }
 
-.hero-img-wrapper-desktop {
-  display: none;
-}
-
 .section-hero {
   background-color: hsl(256, 26%, 20%);
   margin-bottom: 9rem;
 }
 .section-hero .hero-img-wrapper-mobile img {
   width: 100%;
+}
+.section-hero .hero-img-wrapper-desktop {
+  display: none;
 }
 .section-hero .hero-content {
   padding: 5.5rem 2rem;
@@ -229,4 +287,25 @@ header nav ul .nav-mobile-decoration img {
 .section-hero .hero-content button {
   position: relative;
   z-index: 5;
+}
+@media screen and (width > 650px) {
+  .section-hero {
+    padding-inline: 10rem;
+    position: relative;
+  }
+  .section-hero .hero-content {
+    max-width: 525px;
+  }
+  .section-hero .hero-img-wrapper-desktop {
+    display: block;
+    position: absolute;
+    right: 10rem;
+    top: 5rem;
+    max-width: 500px;
+  }
+  .section-hero .hero-img-wrapper-mobile,
+  .section-hero .hero-content img:first-child,
+  .section-hero .hero-content img:last-child {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
