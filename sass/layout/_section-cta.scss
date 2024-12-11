@@ -2,20 +2,49 @@
 
 .section-cta {
   position: relative;
+  color: $neutral-very-light-gray;
+  background-color: $primary-dk-violet;
+  margin: 8rem 1.5rem;
+  padding: 4rem 1.5rem;
+
   img {
     position: absolute;
     top: 0;
     right: 0;
     z-index: 1;
   }
-  color: $neutral-very-light-gray;
-  background-color: $primary-dk-violet;
-  margin: 8rem 1.5rem;
-  padding: 4rem 1.5rem;
+
+  img:last-child {
+    display: none;
+  }
 
   p {
     margin-bottom: 3rem;
     position: relative;
     z-index: 5;
+  }
+
+  @media screen and (width > 650px) {
+    margin: 8rem $desktop-inline-padding;
+    padding: 4rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    img:first-child {
+      display: none;
+    }
+
+    img:last-child {
+      display: block;
+      height: 100%;
+      pointer-events: none;
+    }
+
+    p {
+      flex-basis: 50%;
+      margin: 0;
+      font-size: clamp(2.5rem, 5vw, 3rem);
+    }
   }
 }

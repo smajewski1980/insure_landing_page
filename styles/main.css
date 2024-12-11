@@ -231,10 +231,35 @@ header nav ul button {
   right: 0;
   z-index: 1;
 }
+.section-cta img:last-child {
+  display: none;
+}
 .section-cta p {
   margin-bottom: 3rem;
   position: relative;
   z-index: 5;
+}
+@media screen and (width > 650px) {
+  .section-cta {
+    margin: 8rem 12rem;
+    padding: 4rem 6rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .section-cta img:first-child {
+    display: none;
+  }
+  .section-cta img:last-child {
+    display: block;
+    height: 100%;
+    pointer-events: none;
+  }
+  .section-cta p {
+    flex-basis: 50%;
+    margin: 0;
+    font-size: clamp(2.5rem, 5vw, 3rem);
+  }
 }
 
 .section-different::before {
