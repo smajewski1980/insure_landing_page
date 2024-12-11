@@ -43,6 +43,7 @@ footer {
 
     ul li {
       font-weight: 700;
+      cursor: pointer;
     }
 
     ul li:not(:last-child) {
@@ -70,6 +71,14 @@ footer {
 
       .footer-deco-mobile {
         display: none;
+      }
+    }
+    .footer-bottom {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+
+      li {
+        font-size: 1rem;
       }
     }
   }
