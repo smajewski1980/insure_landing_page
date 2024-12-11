@@ -146,6 +146,7 @@ header nav ul li {
   margin-inline: auto;
   color: white;
   padding-block: 0.5rem;
+  cursor: pointer;
 }
 header nav ul .nav-mobile-decoration {
   position: absolute;
@@ -291,6 +292,10 @@ header nav ul button {
   position: relative;
   z-index: 5;
 }
+.section-hero .hero-deco-right,
+.section-hero .hero-deco-left {
+  display: none;
+}
 @media screen and (width > 650px) {
   .section-hero {
     min-height: 625px;
@@ -328,5 +333,18 @@ header nav ul button {
   .section-hero .hero-content img:first-child,
   .section-hero .hero-content img:last-child {
     display: none;
+  }
+  .section-hero .hero-deco-right,
+  .section-hero .hero-deco-left {
+    position: absolute;
+    display: block;
+  }
+  .section-hero .hero-deco-left {
+    left: 0;
+    top: 75%;
+  }
+  .section-hero .hero-deco-right {
+    right: 0;
+    top: 0;
   }
 }/*# sourceMappingURL=main.css.map */

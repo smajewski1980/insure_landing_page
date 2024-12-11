@@ -15,9 +15,11 @@
   .hero-img-wrapper-desktop {
     display: none;
   }
+
   .hero-content {
     padding: 5.5rem 2rem;
     position: relative;
+
     h1,
     p {
       color: $neutral-very-light-gray;
@@ -46,27 +48,31 @@
       bottom: -12rem;
       z-index: 1;
     }
+
     button {
       position: relative;
       z-index: 5;
     }
   }
-
+  .hero-deco-right,
+  .hero-deco-left {
+    display: none;
+  }
   @media screen and (width > 650px) {
-    // * {
-    //   outline: 2px solid lime;
-    // }
     min-height: 625px;
     padding-inline: $desktop-inline-padding;
     position: relative;
     display: grid;
     align-items: end;
+
     .hero-content {
       max-width: 64ch;
       padding-inline: 0rem 4rem;
+
       p {
         margin-top: 2.5rem;
       }
+
       &::before {
         @include section-decoration(white);
         position: absolute;
@@ -80,10 +86,27 @@
       right: $desktop-inline-padding;
       top: 8rem;
     }
+
     .hero-img-wrapper-mobile,
     .hero-content img:first-child,
     .hero-content img:last-child {
       display: none;
+    }
+
+    .hero-deco-right,
+    .hero-deco-left {
+      position: absolute;
+      display: block;
+    }
+
+    .hero-deco-left {
+      left: 0;
+      top: 75%;
+    }
+
+    .hero-deco-right {
+      right: 0;
+      top: 0;
     }
   }
 }
