@@ -6,9 +6,7 @@ header {
   display: flex;
   justify-content: space-between;
   padding: 1.5rem;
-  // * {
-  //   outline: 2px solid lime;
-  // }
+
   nav {
     .close-icon-wrapper {
       display: none;
@@ -23,6 +21,7 @@ header {
       transform: translatex(-100vw);
       z-index: 999;
       text-align: center;
+
       li {
         font-size: 1.5rem;
         min-width: fit-content;
@@ -71,11 +70,19 @@ header {
           padding: 0;
           margin: 0;
           opacity: 0.7;
+          &:hover {
+            opacity: 1;
+            text-shadow: 0px 0px 0px $primary-dk-violet;
+          }
         }
         button {
           @include buttons($primary-dk-violet);
           margin-left: 1.5rem;
           min-width: fit-content;
+          &:hover {
+            color: $neutral-very-light-gray;
+            background-color: $primary-dk-violet;
+          }
         }
         .nav-mobile-decoration {
           display: none;

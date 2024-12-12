@@ -52,6 +52,10 @@
     button {
       position: relative;
       z-index: 5;
+      &:hover {
+        color: $primary-dk-violet;
+        background-color: $neutral-very-light-gray;
+      }
     }
   }
   .hero-deco-right,
