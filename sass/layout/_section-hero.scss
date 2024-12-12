@@ -1,8 +1,5 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/mixins" as *;
-
-// once we get a media query in place we can get rid of above
-
 .section-hero {
   background-color: $primary-dk-violet;
   margin-bottom: 9rem;
@@ -12,6 +9,7 @@
       width: 100%;
     }
   }
+
   .hero-img-wrapper-desktop {
     display: none;
   }
@@ -36,38 +34,41 @@
     }
 
     img:first-child {
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
       z-index: 1;
     }
 
     img:last-child {
+      bottom: -12rem;
       position: absolute;
       right: 0;
-      bottom: -12rem;
       z-index: 1;
     }
 
     button {
       position: relative;
       z-index: 5;
+
       &:hover {
-        color: $primary-dk-violet;
         background-color: $neutral-very-light-gray;
+        color: $primary-dk-violet;
       }
     }
   }
+
   .hero-deco-right,
   .hero-deco-left {
     display: none;
   }
+
   @media screen and (width > 650px) {
+    align-items: end;
+    display: grid;
     min-height: 625px;
     padding-inline: $desktop-inline-padding;
     position: relative;
-    display: grid;
-    align-items: end;
 
     .hero-content {
       max-width: 64ch;
@@ -99,8 +100,8 @@
 
     .hero-deco-right,
     .hero-deco-left {
-      position: absolute;
       display: block;
+      position: absolute;
     }
 
     .hero-deco-left {

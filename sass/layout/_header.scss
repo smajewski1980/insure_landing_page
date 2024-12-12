@@ -11,65 +11,68 @@ header {
     .close-icon-wrapper {
       display: none;
     }
-
     ul {
+      background-color: $primary-dk-violet;
+      inset: 0;
       margin-top: 5rem;
       position: absolute;
-      inset: 0;
-      background-color: $primary-dk-violet;
-      transition: transform 0.5s ease;
-      transform: translatex(-100vw);
-      z-index: 999;
       text-align: center;
+      transform: translatex(-100vw);
+      transition: transform 0.5s ease;
+      z-index: 999;
 
       li {
+        color: white;
+        cursor: pointer;
         font-size: 1.5rem;
-        min-width: fit-content;
-        width: 90%;
         margin-block: 1.5rem;
         margin-inline: auto;
-        color: white;
+        min-width: fit-content;
         padding-block: 0.5rem;
-        cursor: pointer;
+        width: 90%;
       }
+
       .nav-mobile-decoration {
+        bottom: 0;
+        left: 0;
         position: absolute;
         width: 100%;
-        left: 0;
-        bottom: 0;
+
         img {
           min-width: 100vw;
         }
       }
+
       button {
         @include buttons($neutral-very-light-gray);
-        width: 75%;
-        padding-block: 0.75rem;
         font-weight: 700;
+        padding-block: 0.75rem;
+        width: 75%;
       }
     }
     @media screen and (width > 650px) {
-      // * {
-      //   outline: 2px solid lime;
-      // }
       margin-block: 1.5rem;
+
       .hamburger-wrapper {
         display: none;
       }
+
       ul {
         align-items: center;
-        margin-top: 0;
-        position: static;
         background-color: unset;
-        transform: unset;
         display: flex;
         gap: 2rem;
+        margin-top: 0;
+        position: static;
+        transform: unset;
+
         li {
-          font-size: 1.25rem;
           color: $primary-dk-violet;
-          padding: 0;
+          font-size: 1.25rem;
           margin: 0;
           opacity: 0.7;
+          padding: 0;
+
           &:hover {
             opacity: 1;
             text-shadow: 0px 0px 0px $primary-dk-violet;
@@ -79,9 +82,10 @@ header {
           @include buttons($primary-dk-violet);
           margin-left: 1.5rem;
           min-width: fit-content;
+
           &:hover {
-            color: $neutral-very-light-gray;
             background-color: $primary-dk-violet;
+            color: $neutral-very-light-gray;
           }
         }
         .nav-mobile-decoration {
@@ -91,7 +95,7 @@ header {
     }
   }
   @media screen and (width > 650px) {
-    padding-inline: $desktop-inline-padding;
     padding-block: 0;
+    padding-inline: $desktop-inline-padding;
   }
 }

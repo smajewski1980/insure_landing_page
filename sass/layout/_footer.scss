@@ -1,90 +1,80 @@
 @use "../abstracts/variables" as *;
-
 footer {
   background-color: $neutral-light-gray;
   position: relative;
 
   .footer-top {
-    padding-block: 5rem 2.5rem;
-    margin-inline: 1.5rem;
     border-bottom: 1px solid lighten($primary-dk-violet, 50%);
+    margin-inline: 1.5rem;
+    padding-block: 5rem 2.5rem;
 
     > img {
+      left: 0;
       position: absolute;
       top: 0;
-      left: 0;
     }
-
     .footer-deco-desktop {
       display: none;
     }
-
     > * {
-      width: fit-content;
       margin-inline: auto;
+      width: fit-content;
     }
-
     .social-icons-wrapper {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+
       > * {
         cursor: pointer;
+
         &:hover {
           filter: brightness(0);
         }
       }
-
-      display: flex;
-      margin-top: 1.5rem;
-      gap: 1.5rem;
     }
   }
-
   .footer-bottom {
     padding-bottom: 3rem;
 
     h4 {
-      opacity: 0.4;
       margin-block: 2rem 1rem;
+      opacity: 0.4;
     }
-
     ul li {
-      font-weight: 700;
       cursor: pointer;
+      font-weight: 700;
     }
-
     ul li:not(:last-child) {
       margin-bottom: 0.5rem;
     }
   }
-
   @media screen and (width > 650px) {
     padding-inline: $desktop-inline-padding;
+
     .footer-top {
-      margin: 0;
       display: flex;
       justify-content: space-between;
+      margin: 0;
 
       > * {
         margin-inline: unset;
       }
-
       .social-icons-wrapper {
         margin-top: 0;
       }
-
       .footer-deco-desktop {
         display: block;
+        filter: brightness(0.8);
         pointer-events: none;
       }
-
       .footer-deco-mobile {
         display: none;
       }
-
       .logo-wrapper {
         position: relative;
       }
     }
-
     .footer-bottom {
       display: grid;
       grid-template-columns: repeat(4, 1fr);

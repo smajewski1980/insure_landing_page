@@ -1,16 +1,16 @@
 @use "../abstracts/variables" as *;
 
 .section-cta {
-  position: relative;
-  color: $neutral-very-light-gray;
   background-color: $primary-dk-violet;
+  color: $neutral-very-light-gray;
   margin: 8rem 1.5rem;
   padding: 4rem 1.5rem;
+  position: relative;
 
   img {
     position: absolute;
-    top: 0;
     right: 0;
+    top: 0;
     z-index: 1;
   }
 
@@ -25,11 +25,11 @@
   }
 
   @media screen and (width > 650px) {
-    margin: 8rem $desktop-inline-padding;
-    padding: 4rem 6rem;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 8rem $desktop-inline-padding;
+    padding: 4rem 6rem;
 
     img:first-child {
       display: none;
@@ -43,13 +43,13 @@
 
     p {
       flex-basis: 50%;
-      margin: 0;
       font-size: clamp(2.5rem, 5vw, 3rem);
+      margin: 0;
     }
 
     button:hover {
-      color: $primary-dk-violet;
       background-color: $neutral-very-light-gray;
+      color: $primary-dk-violet;
       position: relative;
       z-index: 5;
     }

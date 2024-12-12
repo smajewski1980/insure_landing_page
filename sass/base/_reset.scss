@@ -4,23 +4,19 @@
   box-sizing: border-box;
   margin: 0;
 }
-
 ul {
   list-style: none;
   padding: 0;
 }
-
 body {
-  min-height: 100vh;
   line-height: 1.5;
+  min-height: 100vh;
 }
-
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
-
 button {
   font: inherit;
 }

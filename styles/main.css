@@ -11,14 +11,14 @@ ul {
 }
 
 body {
-  min-height: 100vh;
   line-height: 1.5;
+  min-height: 100vh;
 }
 
 img,
 picture {
-  max-width: 100%;
   display: block;
+  max-width: 100%;
 }
 
 button {
@@ -65,9 +65,9 @@ button {
 }
 
 .card {
-  padding-inline: 1.5rem;
-  max-width: 25rem;
   margin-inline: auto;
+  max-width: 25rem;
+  padding-inline: 1.5rem;
 }
 .card img {
   margin-inline: auto;
@@ -90,27 +90,27 @@ footer {
   position: relative;
 }
 footer .footer-top {
-  padding-block: 5rem 2.5rem;
-  margin-inline: 1.5rem;
   border-bottom: 1px solid #a99fc6;
+  margin-inline: 1.5rem;
+  padding-block: 5rem 2.5rem;
 }
 footer .footer-top > img {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
 }
 footer .footer-top .footer-deco-desktop {
   display: none;
 }
 footer .footer-top > * {
+  margin-inline: auto;
   width: -moz-fit-content;
   width: fit-content;
-  margin-inline: auto;
 }
 footer .footer-top .social-icons-wrapper {
   display: flex;
-  margin-top: 1.5rem;
   gap: 1.5rem;
+  margin-top: 1.5rem;
 }
 footer .footer-top .social-icons-wrapper > * {
   cursor: pointer;
@@ -122,12 +122,12 @@ footer .footer-bottom {
   padding-bottom: 3rem;
 }
 footer .footer-bottom h4 {
-  opacity: 0.4;
   margin-block: 2rem 1rem;
+  opacity: 0.4;
 }
 footer .footer-bottom ul li {
-  font-weight: 700;
   cursor: pointer;
+  font-weight: 700;
 }
 footer .footer-bottom ul li:not(:last-child) {
   margin-bottom: 0.5rem;
@@ -137,9 +137,9 @@ footer .footer-bottom ul li:not(:last-child) {
     padding-inline: 12rem;
   }
   footer .footer-top {
-    margin: 0;
     display: flex;
     justify-content: space-between;
+    margin: 0;
   }
   footer .footer-top > * {
     margin-inline: unset;
@@ -149,6 +149,7 @@ footer .footer-bottom ul li:not(:last-child) {
   }
   footer .footer-top .footer-deco-desktop {
     display: block;
+    filter: brightness(0.8);
     pointer-events: none;
   }
   footer .footer-top .footer-deco-mobile {
@@ -183,31 +184,31 @@ header nav .close-icon-wrapper {
   display: none;
 }
 header nav ul {
+  background-color: hsl(256, 26%, 20%);
+  inset: 0;
   margin-top: 5rem;
   position: absolute;
-  inset: 0;
-  background-color: hsl(256, 26%, 20%);
-  transition: transform 0.5s ease;
-  transform: translatex(-100vw);
-  z-index: 999;
   text-align: center;
+  transform: translatex(-100vw);
+  transition: transform 0.5s ease;
+  z-index: 999;
 }
 header nav ul li {
+  color: white;
+  cursor: pointer;
   font-size: 1.5rem;
-  min-width: -moz-fit-content;
-  min-width: fit-content;
-  width: 90%;
   margin-block: 1.5rem;
   margin-inline: auto;
-  color: white;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
   padding-block: 0.5rem;
-  cursor: pointer;
+  width: 90%;
 }
 header nav ul .nav-mobile-decoration {
+  bottom: 0;
+  left: 0;
   position: absolute;
   width: 100%;
-  left: 0;
-  bottom: 0;
 }
 header nav ul .nav-mobile-decoration img {
   min-width: 100vw;
@@ -219,9 +220,9 @@ header nav ul button {
   cursor: pointer;
   padding: 0.5rem 1.5rem;
   letter-spacing: 1px;
-  width: 75%;
-  padding-block: 0.75rem;
   font-weight: 700;
+  padding-block: 0.75rem;
+  width: 75%;
 }
 @media screen and (width > 650px) {
   header nav {
@@ -232,19 +233,19 @@ header nav ul button {
   }
   header nav ul {
     align-items: center;
-    margin-top: 0;
-    position: static;
     background-color: unset;
-    transform: unset;
     display: flex;
     gap: 2rem;
+    margin-top: 0;
+    position: static;
+    transform: unset;
   }
   header nav ul li {
-    font-size: 1.25rem;
     color: hsl(256, 26%, 20%);
-    padding: 0;
+    font-size: 1.25rem;
     margin: 0;
     opacity: 0.7;
+    padding: 0;
   }
   header nav ul li:hover {
     opacity: 1;
@@ -262,8 +263,8 @@ header nav ul button {
     min-width: fit-content;
   }
   header nav ul button:hover {
-    color: hsl(0, 0%, 98%);
     background-color: hsl(256, 26%, 20%);
+    color: hsl(0, 0%, 98%);
   }
   header nav ul .nav-mobile-decoration {
     display: none;
@@ -271,22 +272,22 @@ header nav ul button {
 }
 @media screen and (width > 650px) {
   header {
-    padding-inline: 12rem;
     padding-block: 0;
+    padding-inline: 12rem;
   }
 }
 
 .section-cta {
-  position: relative;
-  color: hsl(0, 0%, 98%);
   background-color: hsl(256, 26%, 20%);
+  color: hsl(0, 0%, 98%);
   margin: 8rem 1.5rem;
   padding: 4rem 1.5rem;
+  position: relative;
 }
 .section-cta img {
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   z-index: 1;
 }
 .section-cta img:last-child {
@@ -299,11 +300,11 @@ header nav ul button {
 }
 @media screen and (width > 650px) {
   .section-cta {
-    margin: 8rem 12rem;
-    padding: 4rem 6rem;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    margin: 8rem 12rem;
+    padding: 4rem 6rem;
   }
   .section-cta img:first-child {
     display: none;
@@ -315,12 +316,12 @@ header nav ul button {
   }
   .section-cta p {
     flex-basis: 50%;
-    margin: 0;
     font-size: clamp(2.5rem, 5vw, 3rem);
+    margin: 0;
   }
   .section-cta button:hover {
-    color: hsl(256, 26%, 20%);
     background-color: hsl(0, 0%, 98%);
+    color: hsl(256, 26%, 20%);
     position: relative;
     z-index: 5;
   }
@@ -390,15 +391,15 @@ header nav ul button {
   margin-bottom: 2rem;
 }
 .section-hero .hero-content img:first-child {
+  left: 0;
   position: absolute;
   top: 0;
-  left: 0;
   z-index: 1;
 }
 .section-hero .hero-content img:last-child {
+  bottom: -12rem;
   position: absolute;
   right: 0;
-  bottom: -12rem;
   z-index: 1;
 }
 .section-hero .hero-content button {
@@ -406,8 +407,8 @@ header nav ul button {
   z-index: 5;
 }
 .section-hero .hero-content button:hover {
-  color: hsl(256, 26%, 20%);
   background-color: hsl(0, 0%, 98%);
+  color: hsl(256, 26%, 20%);
 }
 .section-hero .hero-deco-right,
 .section-hero .hero-deco-left {
@@ -415,11 +416,11 @@ header nav ul button {
 }
 @media screen and (width > 650px) {
   .section-hero {
+    align-items: end;
+    display: grid;
     min-height: 625px;
     padding-inline: 12rem;
     position: relative;
-    display: grid;
-    align-items: end;
   }
   .section-hero .hero-content {
     max-width: 64ch;
@@ -453,8 +454,8 @@ header nav ul button {
   }
   .section-hero .hero-deco-right,
   .section-hero .hero-deco-left {
-    position: absolute;
     display: block;
+    position: absolute;
   }
   .section-hero .hero-deco-left {
     left: 0;
